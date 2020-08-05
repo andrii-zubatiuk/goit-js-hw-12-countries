@@ -29,6 +29,12 @@ function onInputValue(event) {
       return;
     }
 
-    error('Too many matches found. Please enter a more specific query!');
+    if (countries.length > 10) {
+      error('Too many matches found. Please enter a more specific query!');
+
+      return;
+    }
+
+    error('Nothing found!');
   });
 }
